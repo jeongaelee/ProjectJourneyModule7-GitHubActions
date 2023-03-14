@@ -51,21 +51,21 @@ Step 6에서는 Azure Container Registry에 로그인하는 Username과 Password
     on: [push]
 
     jobs:
-    build:
+      build:
         runs-on: ubuntu-latest
         steps:
         # checkout the repo
         - uses: actions/checkout@v2
         - uses: Azure/login@v1
-        with:
+          with:
             creds: ${{ secrets.AZURE_CREDENTIALS }}
         - uses: Azure/get-keyvault-secrets@v1
-        with: 
+          with: 
             keyvault: "containervault-webapp"
             secrets: 'containerPassword, containerUsername'
-        id: myGetSecretAction
+          id: myGetSecretAction
         - uses: azure/docker-login@v1
-        with:
+          with:
             login-server: ${{ steps.myGetSecretAction.outputs.containerUsername }}.azurecr.io
             username: ${{ steps.myGetSecretAction.outputs.containerUsername }}
             password: ${{ steps.myGetSecretAction.outputs.containerPassword }}
