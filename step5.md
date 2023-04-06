@@ -75,8 +75,8 @@ GitHub CodeQL은 개발자가 보안 검사를 자동화하고 보안 분석가�
 
 ## 실습 순서
 
-* [Step 1. Azure에서 ASP.NET Core 웹앱 만들기](https://github.com/jeongaelee/Module7-webapp-github-actions/blob/master/step1.md)
-* [Step 2. GitHub Repository에 코드 업로드](https://github.com/jeongaelee/Module7-webapp-github-actions/blob/master/step2.md)
-* [Step 3. GitHub Actions CI/CD 파이프라인 구성 - Build](https://github.com/jeongaelee/Module7-webapp-github-actions/blob/master/step3.md)
-* [Step 4. GitHub Actions CI/CD 파이프라인 구성 - Deploy](https://github.com/jeongaelee/Module7-webapp-github-actions/blob/master/step4.md)
-* [Step 5. CodeQL을 이용하여 코드 보안 검사](https://github.com/jeongaelee/Module7-webapp-github-actions/blob/master/step5.md)
+* [Step 1. Azure에서 ASP.NET Core 웹앱 만들기](https://github.com/jeongaelee/ProjectJourneyModule7-GitHubActions/blob/master/step1.md)
+* [Step 2. GitHub Repository에 코드 업로드](https://github.com/jeongaelee/ProjectJourneyModule7-GitHubActions/blob/master/step2.md)
+* [Step 3. GitHub Actions CI/CD 파이프라인 구성 - Build](https://github.com/jeongaelee/ProjectJourneyModule7-GitHubActions/blob/master/step3.md)
+* [Step 4. GitHub Actions CI/CD 파이프라인 구성 - Deploy](https://github.com/jeongaelee/ProjectJourneyModule7-GitHubActions/blob/master/step4.md)
+* [Step 5. CodeQL을 이용하여 코드 보안 검사](https://github.com/jeongaelee/ProjectJourneyModule7-GitHubActions/blob/master/step5.md)
