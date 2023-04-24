@@ -27,7 +27,8 @@
 
 1. [Azure Portal](https://portal.azure.com/)으로 접속하여 새 리소스 그룹을 생성합니다.
 2. Visual Studio Code에서 명령 팔레트를 엽니다(Ctrl+Shift+P).
-3. 프롬프트에 다음과 같이 응답합니다.
+3. "Azure App Service: 웹앱에 배포"를 검색하여 선택합니다.
+4. 프롬프트에 다음과 같이 응답합니다.
     * MyFirstAzureWebApp을 배포할 폴더로 선택합니다.
     * 메세지가 나타나면 "Add Config"를 선택합니다.
     * 메세지가 표시되면 Azure 계정에 로그인합니다.
@@ -40,16 +41,16 @@
     * 가까운 위치를 선택합니다.
     * "Create a new App Service plan"을 선택하고, 이름을 제공하고, "F1 Free" 가격 계층을 선택합니다.
     * Application Insights 리소스에 대해 "Skip for now"를 선택합니다.
-4. 항상 "MyFirstAzureWebApp" 작업 영역을 <앱이름>에 배포 팝업에서 Visual Studio Code가 해당 작업 영역에 있을 때마다 동일한 App Service 앱에 배포되도록 "예"를 선택합니다.
-5. 게시가 완료되면 알림에서 "Browse Website"를 선택하고, 메세지가 나타나면 "Open"을 선택합니다.
+5. 항상 "MyFirstAzureWebApp" 작업 영역을 <앱이름>에 배포 팝업에서 Visual Studio Code가 해당 작업 영역에 있을 때마다 동일한 App Service 앱에 배포되도록 "예"를 선택합니다.
+6. 게시가 완료되면 알림에서 "Browse Website"를 선택하고, 메세지가 나타나면 "Open"을 선택합니다.
     !["id02"](images/step1-02.png)
 
 
 ## 실습 순서
 
-* [Step 1. Azure에서 ASP.NET Core 웹앱 만들기](https://github.com/jeongaelee/ProjectJourneyModule7-GitHubActions/blob/master/step1.md)
-* [Step 2. GitHub Repository에 코드 업로드](https://github.com/jeongaelee/ProjectJourneyModule7-GitHubActions/blob/master/step2.md)
-* [Step 3. GitHub Actions CI/CD 파이프라인 구성 - Build](https://github.com/ProjectJourneyModule7-GitHubActions/blob/master/step3.md)
-* [Step 4. GitHub Actions CI/CD 파이프라인 구성 - Deploy](https://github.com/ProjectJourneyModule7-GitHubActions/blob/master/step4.md)
-* [Step 5. CodeQL을 이용하여 코드 보안 검사](https://github.com/jeongaelee/ProjectJourneyModule7-GitHubActions/blob/master/step5.md)
-* [Step 6. Step 6. GitHub Actions 워크플로에서 Key Vault Secret(비밀) 사용](https://github.com/jeongaelee/ProjectJourneyModule7-GitHubActions/blob/master/step6.md)
+* [Step 1. Azure에서 ASP.NET Core 웹앱 만들기](https://github.com/jeongaelee/Module7-webapp-github-actions/blob/master/step1.md)
+* [Step 2. GitHub Repository에 코드 업로드](https://github.com/jeongaelee/Module7-webapp-github-actions/blob/master/step2.md)
+* [Step 3. GitHub Actions CI/CD 파이프라인 구성 - Build](https://github.com/jeongaelee/Module7-webapp-github-actions/blob/master/step3.md)
+* [Step 4. GitHub Actions CI/CD 파이프라인 구성 - Deploy](https://github.com/jeongaelee/Module7-webapp-github-actions/blob/master/step4.md)
+* [Step 5. CodeQL을 이용하여 코드 보안 검사](https://github.com/jeongaelee/Module7-webapp-github-actions/blob/master/step5.md)
+* [Step 6. Step 6. GitHub Actions 워크플로에서 Key Vault Secret(비밀) 사용](https://github.com/jeongaelee/Module7-webapp-github-actions/blob/master/step6.md)
