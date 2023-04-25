@@ -23,19 +23,22 @@ Step 6에서는 Azure Container Registry에 로그인하는 Username과 Password
 
     !["id6-01"](images/step6-01.png)
 
-4. Azure Portal에서 Azure Container Registry를 생성합니다. 생성된 Container Registry의 "Access keys" 메뉴에서 Username과 password를 복사하여 Key Vault의 Secret을 생성할 것입니다.
+4. Azure Portal에서 Azure Container Registry를 생성합니다. 
     
+    !["id6-02"](images/step6-07.png)
+
+5. 생성된 Container Registry의 "Access keys" 메뉴에서 Username과 password를 복사하여 Key Vault의 Secret을 생성할 것입니다.
     !["id6-02"](images/step6-02.png)
 
-5. Azure Portal에서 Key Vault를 생성하고 Key Vault의 "Secret" 메뉴에서 containerUsername, containerPassword를 생성합니다. #4에서 복사한 Username과 password 값을 입력합니다.
+6. Azure Portal에서 Key Vault를 생성하고 Key Vault의 "Secret" 메뉴에서 containerUsername, containerPassword를 생성합니다. #4에서 복사한 Username과 password 값을 입력합니다.
 
     !["id6-03"](images/step6-03.png)
 
-6. Azure Portal의 Cloudshell을 열어서 역할 할당 (role assignment) 추가합니다. 키 자격 증명 모음에 액세스할 수 있도록 Azure 서비스 주체에 대한 get과 list 액세스 권한을 부여합니다. #5에서 생성한 Key Vault의 이름을 "keyVaultName"에 넣고, #1에서 출력한 서비스 주체의 clientId를 "clientIdGUID"에 넣습니다.
+7. Azure Portal의 Cloudshell을 열어서 역할 할당 (role assignment) 추가합니다. 키 자격 증명 모음에 액세스할 수 있도록 Azure 서비스 주체에 대한 get과 list 액세스 권한을 부여합니다. #5에서 생성한 Key Vault의 이름을 "keyVaultName"에 넣고, #1에서 출력한 서비스 주체의 clientId를 "clientIdGUID"에 넣습니다.
 
     > az keyvault set-policy -n {keyVaultName} --secret-permissions get list --spn {clientIdGUID}
 
-7. GitHub Actions의 워크플로우에서 키 자격 증명 모음 비밀 (Key Vault Secret)을 참조하여 Azure Container Registry에 로그인 하는 job을 추가합니다.
+8. GitHub Actions의 워크플로우에서 키 자격 증명 모음 비밀 (Key Vault Secret)을 참조하여 Azure Container Registry에 로그인 하는 job을 추가합니다.
 
     먼저, 리파지토리의 "Actions" 메뉴에서 "New workflow"를 클릭하여 새로운 워크플로우를 생성합니다.
     
@@ -71,7 +74,7 @@ Step 6에서는 Azure Container Registry에 로그인하는 Username과 Password
             password: ${{ steps.myGetSecretAction.outputs.containerPassword }}
 ```
 
-8. "Actions"에서 새로운 워크플로우가 실행되는 것을 확인하고 로그를 확인하여 Azure Container Registry에 로그인 되는 것을 확인합니다.
+9. "Actions"에서 새로운 워크플로우가 실행되는 것을 확인하고 로그를 확인하여 Azure Container Registry에 로그인 되는 것을 확인합니다.
 
     !["id6-03"](images/step6-06.png)
 
