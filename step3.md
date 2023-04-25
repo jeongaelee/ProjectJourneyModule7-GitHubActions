@@ -56,7 +56,7 @@ jobs:
 
     !["id3-03"](images/step3-03.png)
 
-6. 여기까지는 master 브랜치에 직접 코드를 Push 하였으나, 실제 개발 환경에서는 master (혹은 main) 브랜치에서 직접 개발을 하는 경우는 없다. 아래의 명령어를 차례로 실행하여 개발(dev1) 브랜치를 생성하고, dev1 브랜치에서 코드를 수정한 후 GitHub에 Push 한 후 master 브랜치에 Pull Request를 생성하여 Merge 합니다.
+6. 여기까지는 main 브랜치에 직접 코드를 Push 하였으나, 실제 개발 환경에서는 main 브랜치에서 직접 개발을 하는 경우는 없다. 아래의 명령어를 차례로 실행하여 개발(dev1) 브랜치를 생성하고, dev1 브랜치에서 코드를 수정한 후 GitHub에 Push 한 후 main 브랜치에 Pull Request를 생성하여 Merge 합니다.
 
     ```
     git branch dev1
