@@ -4,9 +4,9 @@
 
 Step 6에서는 Azure Container Registry에 로그인하는 Username과 Password를 Key Vault Secret에 저장하고, GitHub Actions 워크플로에서 Key Vault Secret(비밀)을 사용하는 방법에 대해서 실습해봅니다.
 
-* 전체 워크플로우는 [GitHub Actions 워크플로에서 Key Vault 비밀 사용](https://learn.microsoft.com/ko-kr/azure/developer/github/github-key-vault)로 구성하여야 하나, 본 Step에서는 단순히 GitHub Actions에서 Key Vault를 사용하는 부분만을 학습하는 목적으로 [Azure App Service에 컨테이너를 배포](https://learn.microsoft.com/ko-kr/azure/developer/javascript/tutorial/tutorial-vscode-docker-node/tutorial-vscode-docker-node-01)하는 부분은 스킵하고, Container Registry에 로그인하는 step만 구성하도록 합니다.
+* 전체 워크플로우는 [GitHub Actions 워크플로에서 Key Vault 비밀 사용](https://learn.microsoft.com/ko-kr/azure/developer/github/github-key-vault)으로 구성하여야 하나, 본 Step에서는 단순히 GitHub Actions에서 Key Vault를 사용하는 부분만을 학습하는 목적으로 [Azure App Service에 컨테이너를 배포](https://learn.microsoft.com/ko-kr/azure/developer/javascript/tutorial/tutorial-vscode-docker-node/tutorial-vscode-docker-node-01)하는 부분은 스킵하고, Container Registry에 로그인하는 step만 구성하도록 합니다.
 
-1. 서비스 주체 (Service Principal)을 정의합니다. Azure Portal의 Cloudshell을 열어서 아래의 Azure CLI를 실행하여 서비스 주체를 만듭니다. "myApp", "subscription-id", "resourceGroups"를 작업중인 Azure 구독과 앱 이름에 맞게 변경합니다.
+1. 서비스 주체 (Service Principal)을 정의합니다. Azure Portal의 Cloudshell을 열어서 아래의 Azure CLI를 실행하여 서비스 주체를 만듭니다. "{myApp}", "{subscription-id}", "{resourceGroups}"를 작업중인 Azure 구독과 앱 이름에 맞게 변경합니다.
 
     > az ad sp create-for-rbac --name {myApp} --role contributor --scopes /subscriptions/{subscription-id}/resourceGroups/{MyResourceGroup} --sdk-auth
 
