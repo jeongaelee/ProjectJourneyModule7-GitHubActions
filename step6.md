@@ -24,16 +24,17 @@ Step 6에서는 Azure Container Registry에 로그인하는 Username과 Password
     !["id6-01"](images/step6-01.png)
 
 4. Azure Portal에서 Azure Container Registry를 생성합니다. 
-    
-    !["id6-02"](images/step6-07.png)
+
+    <img src = "images/step6-07.png" width="400">
 
 5. 생성된 Container Registry의 "Access keys" 메뉴에서 Username과 password를 복사하여 Key Vault의 Secret을 생성할 것입니다.
-    !["id6-02"](images/step6-02.png)
+
+    <img src = "images/step6-02.png" width="600">
 
 6. Azure Portal에서 Key Vault를 생성하고 Key Vault의 "Secret" 메뉴에서 containerUsername, containerPassword를 생성합니다. #4에서 복사한 Username과 password 값을 입력합니다.
 
-    !["id6-03"](images/step6-03.png)
-
+    <img src = "images/step6-03.png" width="600">
+    
 7. Azure Portal의 Cloudshell을 열어서 역할 할당 (role assignment) 추가합니다. 키 자격 증명 모음에 액세스할 수 있도록 Azure 서비스 주체에 대한 get과 list 액세스 권한을 부여합니다. #5에서 생성한 Key Vault의 이름을 "keyVaultName"에 넣고, #1에서 출력한 서비스 주체의 clientId를 "clientIdGUID"에 넣습니다.
 
     > az keyvault set-policy -n {keyVaultName} --secret-permissions get list --spn {clientIdGUID}
@@ -42,11 +43,11 @@ Step 6에서는 Azure Container Registry에 로그인하는 Username과 Password
 
     먼저, 리파지토리의 "Actions" 메뉴에서 "New workflow"를 클릭하여 새로운 워크플로우를 생성합니다.
     
-    !["id6-04"](images/step6-04.png)
+    <img src = "images/step6-04.png" width="200">
 
     "set up a workflow yourself"를 선택하여 새로운 워크플로우 파일을 열어 아래의 워크플로우를 복사하여 붙여넣기 합니다. "keyvault"에 #5에서 생성한 Key Vault의 이름을 넣습니다.
 
-    !["id6-05"](images/step6-05.png)
+    <img src = "images/step6-05.png" width="600">
 
 ```
     name: Example key vault flow
