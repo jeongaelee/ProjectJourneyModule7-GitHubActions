@@ -9,13 +9,13 @@
 <br> (*주의: Readme 파일은 생성하지 않습니다.)
     
 3. Visual Studio Code의 터미널 혹은 Git Bash를 실행 할 수 있는 Command 창에서 아래의 Git 명령어를 차례로 실행하여 로컬에 있는 코드를 #2에서 생성항 Repository에 업로드 합니다.
-
+<br> (*노트: Git Bash 터미널을 열었을때 기본 Branch가 master로 되어있으면 $git branch -m master main를 실행하여 main으로 변경한다.
 ```
     git init
     git add . 
     git commit -am "first commit"
     git remote add origin <My Repository>
-    git push -u origin master
+    git push -u origin main
 ```
 
 4. <My Repository>에 MyFirstAzureWebApp 코드가 업로드 (Push) 되었는지 확인합니다.
