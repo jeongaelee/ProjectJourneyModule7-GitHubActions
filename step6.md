@@ -29,17 +29,21 @@ Step 6에서는 Azure Container Registry에 로그인하는 Username과 Password
 
 5. 생성된 Container Registry의 "Access keys" 메뉴에서 Username과 password를 복사하여 Key Vault의 Secret을 생성할 것입니다.
 
-    <img src = "images/step6-02.png" width="600">
-
-6. Azure Portal에서 Key Vault를 생성하고 Key Vault의 "Secret" 메뉴에서 containerUsername, containerPassword를 생성합니다. #4에서 복사한 Username과 password 값을 입력합니다.
-
     <img src = "images/step6-03.png" width="600">
+
+6. Azure Portal에서 Key Vault를 생성합니다. 
     
-7. Azure Portal의 Cloudshell을 열어서 역할 할당 (role assignment) 추가합니다. 키 자격 증명 모음에 액세스할 수 있도록 Azure 서비스 주체에 대한 get과 list 액세스 권한을 부여합니다. #5에서 생성한 Key Vault의 이름을 "keyVaultName"에 넣고, #1에서 출력한 서비스 주체의 clientId를 "clientIdGUID"에 넣습니다.
+    <img src = "images/step6-08.png" width="600">
+    
+7. 생성한 Key Vault의 "비밀" 메뉴에서 containerUsername, containerPassword를 생성합니다. #4에서 복사한 Username과 password 값을 입력합니다.
+
+    <img src = "images/step6-02.png" width="600">
+    
+8. Azure Portal의 Cloudshell을 열어서 역할 할당 (role assignment) 추가합니다. 키 자격 증명 모음에 액세스할 수 있도록 Azure 서비스 주체에 대한 get과 list 액세스 권한을 부여합니다. #6에서 생성한 Key Vault의 이름을 "keyVaultName"에 넣고, #1에서 출력한 서비스 주체의 clientId를 "clientIdGUID"에 넣습니다.
 
     > az keyvault set-policy -n {keyVaultName} --secret-permissions get list --spn {clientIdGUID}
 
-8. GitHub Actions의 워크플로우에서 키 자격 증명 모음 비밀 (Key Vault Secret)을 참조하여 Azure Container Registry에 로그인 하는 job을 추가합니다.
+9. GitHub Actions의 워크플로우에서 키 자격 증명 모음 비밀 (Key Vault Secret)을 참조하여 Azure Container Registry에 로그인 하는 job을 추가합니다.
 
     먼저, 리파지토리의 "Actions" 메뉴에서 "New workflow"를 클릭하여 새로운 워크플로우를 생성합니다.
     
