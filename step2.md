@@ -6,7 +6,8 @@
     !["id2-01"](images/step2-01.png)
 
 2. Owner와 Repository name을 설정하고 나머지는 기본값으로 유지 후 "Create repository" 버튼을 눌러서 새로운 Repository를 생성합니다.
-
+<br> (*주의: Readme 파일은 생성하지 않습니다.)
+    
 3. Visual Studio Code의 터미널 혹은 Git Bash를 실행 할 수 있는 Command 창에서 아래의 Git 명령어를 차례로 실행하여 로컬에 있는 코드를 #2에서 생성항 Repository에 업로드 합니다.
 
 ```
