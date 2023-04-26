@@ -16,17 +16,17 @@ GitHub CodeQL은 개발자가 보안 검사를 자동화하고 보안 분석가�
 
     !["id5-03"](images/step5-03.png)
 
-3. 아래와 같이 master 브랜치에 push 혹은 pull_request가 있을 경우 Code Scan이 이루어지도록 YAML 파일을 구성합니다. 언어는 csharp이며, CodeQL의 기본 쿼리셋을 사용합니다. 워크플로우 구성이 끝나면 Commit changes 버튼을 클릭합니다.
+3. 아래와 같이 main 브랜치에 push 혹은 pull_request가 있을 경우 Code Scan이 이루어지도록 YAML 파일을 구성합니다. 언어는 csharp이며, CodeQL의 기본 쿼리셋을 사용합니다. 워크플로우 구성이 끝나면 Commit changes 버튼을 클릭합니다.
 
     ```
     name: "CodeQL"
 
     on:
     push:
-        branches: [ "master" ]
+        branches: [ "main" ]
     pull_request:
         # The branches below must be a subset of the branches above
-        branches: [ "master" ]
+        branches: [ "main" ]
 
     jobs:
     analyze:
@@ -65,7 +65,7 @@ GitHub CodeQL은 개발자가 보안 검사를 자동화하고 보안 분석가�
 
     !["id5-05"](images/step5-05.png)
 
-6. index.cshtml 파일을 수정 한 후 [Step 3. GitHub Actions CI/CD 파이프라인 구성 - Build](https://github.com/jeongaelee/Module7-webapp-github-actions/blob/master/step3.md)의 6번에서 수행하였던 아래의 Git 명령어로 코드를 Commit & Push 한 후 Merge & Pull Request를 수행합니다.
+6. index.cshtml 파일을 수정 한 후 [Step 3. GitHub Actions CI/CD 파이프라인 구성 - Build](https://github.com/jeongaelee/ProjectJourneyModule7-GitHubActions/blob/master/step3.md)의 6번에서 수행하였던 아래의 Git 명령어로 코드를 Commit & Push 한 후 Merge & Pull Request를 수행합니다.
 
 ```
     git add .
